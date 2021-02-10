@@ -69,5 +69,10 @@ body messageBox {
 
 body .map {
   display: none;
+  position: relative;
+}
+
+body .map figcaption span {
+  color: blue;
 }
 /*# sourceMappingURL=indexStyle.css.map */

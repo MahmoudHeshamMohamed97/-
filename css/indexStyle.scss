@@ -74,6 +74,24 @@ body{
 
     .map{
         display: none;
+        position: relative;
+        
+        figcaption{
+            span{
+                color: blue;
+            }
+        }
+        // if we will make the user choose from image
+        // .marg{
+        //     position: absolute;
+        //     top: 2%;
+        //     right: 0;
+        //     width: 30px;
+        //     height: 30px;
+        //     background-color: blue;
+        //     border-radius: 50%;
+        //     cursor: pointer;
+        // }
     }
 
 }
