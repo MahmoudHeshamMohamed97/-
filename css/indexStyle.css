@@ -1,0 +1,73 @@
+body {
+  direction: rtl;
+}
+
+body nav {
+  position: fixed !important;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+body .carousel {
+  margin-top: 55px;
+  height: 80vh;
+  width: 100%;
+}
+
+body .carousel img {
+  max-height: 100%;
+  width: 100%;
+  height: 80vh;
+}
+
+body .carousel .carousel-indicators li {
+  height: 5px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+body .DirectionsPart {
+  border-radius: 7px;
+  background-color: yellowgreen;
+  padding: 25px;
+  width: 50%;
+  margin: auto;
+}
+
+body .DirectionsPart label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+body .DirectionsPart input, body .DirectionsPart select, body .DirectionsPart option {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+body .DirectionsPart input:focus {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+body messageBox {
+  position: fixed;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 25px;
+  border-radius: 7px;
+  text-align: center;
+  background-color: grey;
+}
+
+body .map {
+  display: none;
+}
+/*# sourceMappingURL=indexStyle.css.map */

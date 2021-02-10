@@ -1,0 +1,79 @@
+@import 'indexVariables';
+
+body{
+    direction: rtl;
+
+    nav{
+        position: fixed !important;
+        z-index: 99;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .carousel{
+        margin-top: 55px;
+        height: 80vh;
+        width: 100%;
+        img{
+            max-height: 100%;
+            width: 100%;
+            height: 80vh;
+        }
+        .carousel-indicators{
+            li{
+                height: 5px;
+                background-color: $mainColor;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                margin-right: 15px;
+            }
+        }
+
+        // .carousel-control-prev-icon, .carousel-control-next-icon{
+        //     background-color: $mainColor;
+        //     padding: 15px;
+        // }
+
+    }
+
+    .DirectionsPart{
+        border-radius: 7px;
+        background-color: $mainColor;
+        padding: 25px;
+        width: 50%;
+        margin: auto;
+
+        label{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        input, select, option{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        input:focus{
+            font-size: 22px;
+            font-weight: bold;        
+        }
+        
+    }
+
+    messageBox{
+        position: fixed;
+        z-index: 99;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 25px;
+        border-radius: 7px;
+        text-align: center;
+        background-color: $secondaryColor;
+    }
+
+    .map{
+        display: none;
+    }
+
+}
