@@ -1,0 +1,28 @@
+body{background:url(https://www.adsyndicate.in/wp-content/uploads/2018/02/LP-bg-1.jpg);}
+.main-heading{width:100%; text-align:center; color:white; margin:60px;text-shadow:  5px 5px 5px #fa1616;}
+
+.col-sm-4{text-align: right;}
+h6{text-align: right;}
+h3{text-align: right;color: white;padding:15px;text-shadow:  5px 5px 5px #fa1616;}
+
+    .card {
+        background-color: #fff;
+        border-radius: 25px;
+    }
+    
+    .card-body {
+        flex: 1 1 auto; 
+        min-height: 1px;
+        padding: 2rem;
+        width:100%;
+        height: 350px;
+    }
+    
+.img-box {
+    width:100%;
+    height: 100%;
+    border: 10px solid transparent;
+    border-radius: 25px;
+    padding: 5px;
+border-image: url(../resources/border.png) 25 stretch;
+}  

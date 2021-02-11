@@ -1,5 +1,6 @@
 body {
   direction: rtl;
+  background: url(https://www.adsyndicate.in/wp-content/uploads/2018/02/LP-bg-1.jpg);
 }
 
 body nav {
@@ -72,7 +73,71 @@ body .map {
   position: relative;
 }
 
+body .map figcaption h1 {
+  color: white;
+}
+
 body .map figcaption span {
   color: blue;
+}
+
+body .main {
+  display: block;
+  overflow: hidden;
+  padding: 100px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+body .main h6 {
+  text-align: right;
+}
+
+body .main h3 {
+  text-align: right;
+  color: white;
+  padding: 15px;
+  text-shadow: 5px 5px 5px #fa1616;
+}
+
+body .main .transition {
+  color: white;
+}
+
+body .main .img-box img {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+body .main .text-block {
+  display: block;
+  color: white;
+  border: 10px solid transparent;
+  -o-border-image: url(../resources/border.png) 25 stretch;
+     border-image: url(../resources/border.png) 25 stretch;
+  padding: 5px;
+}
+
+body .main .text-block:hover {
+  -webkit-box-shadow: 10px 10px 5px grey;
+          box-shadow: 10px 10px 5px grey;
+}
+
+body .main .text-block h2 {
+  color: #76ff06;
+  text-shadow: 5px 5px 5px #fa1616;
+}
+
+body .main .main.bg-t {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 120px 0;
+}
+
+body .main h2, body .main p {
+  text-align: right;
 }
 /*# sourceMappingURL=indexStyle.css.map */

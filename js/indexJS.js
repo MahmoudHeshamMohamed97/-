@@ -1,3 +1,14 @@
+wow = new WOW(
+    {
+      animateClass: 'animated',
+      offset:       100,
+      callback:     function(box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+      }
+    }
+  );
+  wow.init();
+  
 let wasalnyBtn = document.getElementById("wasalny");
 let fromStation = "",toStation = "";
 let firstWay = [ 'المرج الجديدة',
