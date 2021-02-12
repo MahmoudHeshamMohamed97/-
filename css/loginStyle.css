@@ -1,0 +1,99 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url(../resources/cover2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url(../resources/cover2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body .user_card {
+  height: 400px;
+  width: 350px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background: #f39c12;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+body .brand_logo_container {
+  position: absolute;
+  height: 170px;
+  width: 170px;
+  top: -75px;
+  border-radius: 50%;
+  background: transparent;
+  padding: 10px;
+  text-align: center;
+}
+
+body .brand_logo {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+body .form_container {
+  margin-top: 100px;
+}
+
+body .login_btn {
+  width: 100%;
+  background: #c0392b !important;
+  color: white !important;
+}
+
+body .login_btn:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  outline: 0px !important;
+}
+
+body .login_container {
+  padding: 0 2rem;
+}
+
+body .input-group-text {
+  background: #c0392b !important;
+  color: white !important;
+  border: 0 !important;
+  border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+body .input_user,
+body .input_pass:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  outline: 0px !important;
+}
+
+body .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #c0392b !important;
+}
+/*# sourceMappingURL=loginStyle.css.map */
