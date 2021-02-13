@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <title>Payment Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/paymentcss.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/payment.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+ 
+
+    <div class="container">
+        <h1>مترو الإنجاز </h1>
+        
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">طرق الدفع </a></li>
+            <li><a data-toggle="tab" href="#menu1">كروت الفيزا</a></li>
+            <li><a data-toggle="tab" href="#menu2">فودافون كاش</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <h2>تعليمات تهمك  </h2>
+                <p>حاولنا نسهل عليك طرق الدفع على قد ما نقدر.. هنا تقدر تدفع بأكتر من طريقة <br>
+                  زى انك تدفع عن طريق الفيزا بأكتر من فيزا .. كمان تقدر تدفع عن طريق فودافون كاش  علشان يوصلك البار كود الخاص بيك اللى هو تذكرتك  عن طريق الإيميل الخاص بيك  او عن طريق موقعنا تقدر تحصل على البار كود بشكل سريع وسهل <br>
+                  نتمنالك تجربة ممتعة .
+                </p>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <h3>ادفع بالفيزا </h3>
+                <div>
+                    <!--contain container-->
+                    <div class="container-flued">
+                        <div class="row">
+                            <div class="col-sm-5">
+
+                                <form action="#" method="Post">
+                                    <h3>كروت الفيزا التى نقبلها </h3>
+                                    <div class="icon-container" id="icons">
+                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                    </div>
+                                    <br><br>
+
+                                    <div>
+                                        <div class="input-div">
+                                            <div class="i">
+                                                <i class="fa fa-address-book" style="font-size:30px"></i>
+                                            </div>
+                                            <div>
+                                                <!--<h5>Name</h5>-->
+                                                <input type="Text" class="input" placeholder="اكتب اسمك " required
+                                                    id="name" title="أكتب أسمك هنا على الأقل 3 حروف">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div>
+                                        <div class="input-div">
+                                            <div class="i">
+                                                <i class="fa fa-envelope icon"></i>
+                                            </div>
+                                            <div>
+                                                <!--<h5>Email</h5>-->
+                                                <input type="Email" class="input" placeholder="ادخل بريدك الإلكترونى"
+                                                    required title="البريد الإلكترونى" id="email">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="input-div">
+                                        <div class="i">
+                                            <i class="fa fa-cc-mastercard"></i>
+                                        </div>
+
+                                        <div>
+                                            <!--<h5>Visa</h5>-->
+                                            <input type="password" class="input" placeholder="ادخل رقم الفيزا" required
+                                                id="visa" title="رقم الفيزا">
+                                        </div>
+                                    </div>
+                                    <br><br>
+
+                                    <input type="button" onclick="mySubmit()" value="ارسل الكود" class="button"></input>
+                                </form>
+                            </div>
+                            <!--first column-->
+                            <div class="col-sm-5" id="container_image">
+                                <img src="visa.jpg" class="image-visa">
+                            </div>
+                            <!--second column-->
+                        </div>
+                        <!--row-->
+                    </div>
+                    <!--container-->
+                </div>
+                <!--contain container-->
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <h3>فوادافون كاش </h3>
+                <div>
+                    <!--contain container-->
+                    <div class="container-flued">
+                        <div class="row">
+                            <div class="col-sm-5">
+
+                                <form action="/action_page.php">                            
+                                    <br><br>
+
+                                    <div>
+                                        <div class="input-div">
+                                            <div class="i">
+                                                <i class="fa fa-mobile" aria-hidden="true"></i>
+
+                                            </div>
+                                            <div>
+                                                <!--<h5>phone Number</h5>-->
+                                                <input type="text" class="input" placeholder="اكتب رقم موبايلك"
+                                                    required title="رقم الموبايل" id="phoneNumber">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="input-div">
+                                        <div class="i">
+                                            <i class="fa fa-lock" aria-hidden="true"></i>
+                                        </div>
+
+                                        <div>
+                                            <!--<h5>Password</h5>-->
+                                            <input type="password" class="input" placeholder="ادخل الرقم السرى" required
+                                                id="pass" title="الرقم السرى">
+                                        </div>
+                                    </div>
+                                    <br><br>
+
+                                    <input type="button" value="ارسل الكود"  class="button"></input>
+                                </form>
+                            </div>
+                            <!--first column-->
+                            <div class="col-sm-5" id="container_image">
+                                <img src="voda.png" class="image-voda">
+                            </div>
+                            <!--second column-->
+                        </div>
+                        <!--row-->
+                    </div>
+                    <!--container-->
+                </div>
+                <!--contain container-->
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

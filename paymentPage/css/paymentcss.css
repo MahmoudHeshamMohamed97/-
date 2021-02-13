@@ -1,9 +1,16 @@
+#home{
+	 font-size: 180%;
+}
 
-
-
-.image{
+.image-visa{
 	width: 70%; height: 60%;
 	border-radius: 15px;
+}
+.image-voda{
+	width: 80%;
+	height: 80%;
+	border-radius: 15px;
+
 }
 .input-div{
 	position: relative;
@@ -51,3 +58,4 @@
 	background-color: black;
 	color: white;
 }
+

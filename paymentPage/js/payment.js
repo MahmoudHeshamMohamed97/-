@@ -1,6 +1,6 @@
-var myNname = document.getElementById('name');
-var myVisa = document.getElementById('visa');
+var myName = document.getElementById('name');
 var myEmail = document.getElementById('email');
+var myVisa = document.getElementById('visa');
 
 
 
@@ -9,19 +9,21 @@ var emailPattern= /^\S+@[a-z]+(.com)$/i;
 var visaPattern = /^\d{15}$/;
 
 
-function myValidation() { 
+function mySubmit() { 
 
-        if (namePattern.test(name.value) && emailPattern.test(email.value) && visaPattern.test(visa.value) ) { 
+        if (namePattern.test(myName.value) && emailPattern.test(myEmail.value) && visaPattern.test(myVisa.value) ) { 
                    window.open("https://www.google.com/");
-        } else if (namePattern.test(name.value)==false) {
-        	name.select();
+        } else if (namePattern.test(myName.value)==false) {
+        	myName.select();
         }
-        else if (emailPattern.test(email.value)==false) {
-        	email.select();
+        else if (emailPattern.test(myEmail.value)==false) {
+        	myEmail.select();
         }
        
-        else if (phonePattern.test(phone.value)==false) {
-        	phone.select();
+        else if (visaPattern.test(myVisa.value)==false) {
+        	myVisa.select();
         }
 
         }
+
+
