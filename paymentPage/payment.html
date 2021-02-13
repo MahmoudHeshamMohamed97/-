@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Payment Page</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/paymentcss.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/payment.js"></script>
+
+</head>
+<body>
+<div class="jumbotron text-center">
+  <h1>Welcome To Payment Page</h1>
+  <p>from here you can reserve your ticket by different way Visa Card or other way</p> 
+</div>
+
+<div class="container">
+    <div class="row">
+    <div class="col-sm-5">
+
+      <form action="/action_page.php">
+        <h3>Accepted Cards</h3>
+        <div class="icon-container" id="icons">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+        </div>
+        <br><br>
+    
+    <div>
+      <div class="input-div">
+          <div class="i">
+            <i class="fa fa-address-book" style="font-size:30px"></i>
+          </div>
+          <div>
+            <!--<h5>Name</h5>-->
+            <input type="Text" class="input"  placeholder="اكتب اسمك " required id="name"  title="أكتب أسمك هنا على الأقل 3 حروف">
+          </div>
+        </div>
+
+    </div>
+
+    <div>
+      <div class="input-div">
+          <div class="i">
+            <i class="fa fa-envelope icon"></i>
+          </div>
+          <div>
+            <!--<h5>Email</h5>-->
+            <input type="Email" class="input"  placeholder="ادخل بريدك الإلكترونى" required title="البريد الإلكترونى" id="email">
+          </div>
+        </div>
+
+    </div>
+
+    <div class="input-div">
+          <div class="i">
+            <i class="fa fa-cc-mastercard"></i>
+          </div>
+        
+          <div>
+            <!--<h5>Visa</h5>-->
+            <input type="password" class="input" placeholder="ادخل رقم الفيزا" required id="visa" title="رقم الفيزا">
+          </div>
+        </div>
+        <br><br>
+ 
+    <input type="button" onclick="myValidation()" value="submit" class="button"></input>
+  </form>
+  </div>
+
+
+  <div class="col-sm-5" id="container_image">
+    <img src="visa.jpg" class="image" >
+
+  </div> 
+</div>
+
+
+
+</body>
+</html>
