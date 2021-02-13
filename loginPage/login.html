@@ -19,8 +19,8 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-        <a class="navbar-brand" href="#">مــتــرو الانــجــاز</a>
+        
+        <a class="navbar-brand " href="#"   >مــتــرو الانــجــاز</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="../index.html">الــرئــيــســيــة </a>
+                    <a class="nav-link" href="#" onclick="home()">الــرئــيــســيــة </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">اتـــصـــل بـــنـــا</a>
@@ -39,56 +39,68 @@
                     <a class="nav-link" href="#">الإشــتــراكــاتــت </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">تــســجــيــل الــدخــول<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" onclick="login()">تــســجــيــل الــدخــول<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ســجــل مــعــنــا</a>
+                    <a class="nav-link" href="#" onclick="register()">ســجــل مــعــنــا</a>
                 </li>
             </ul>
         </div>
     </nav>
 
+    <!--Login Form-->
     <div class="container h-100">
-        <div class="d-flex justify-content-center h-100">
-            <div class="user_card">
-                <div class="d-flex justify-content-center">
-                    <div class="brand_logo_container">
-                        <img src="../resources/metrologo.png" class="brand_logo" alt="Logo">
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center form_container">
-                    <form>
-                        <div class="input-group mb-3">
-                            <div class="input-group-append">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="text" name="" class="form-control input_user" value="" placeholder="username">
-                        </div>
-                        <div class="input-group mb-2">
-                            <div class="input-group-append">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input type="password" name="" class="form-control input_pass" value=""
-                                placeholder="password">
-                        </div>
-                        <div class="form-group">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                <label class="custom-control-label" for="customControlInline">Remember me</label>
+        <div class="row h-100">
+            <div class="col-sm-12 h-100">
+                <div class="d-flex justify-content-center h-100">
+                    <div class="user_card">
+                        <div class="d-flex justify-content-center">
+                            <div class="brand_logo_container">
+                                <img src="../resources/metrologo.png" class="brand_logo" alt="Logo">
+                                <br><br>
+                                       <span id="invalid" style="color: rgb(240, 15, 15);font-weight: bolder;"></span>
+                                <br>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center mt-3 login_container">
-                            <button type="button" name="button" class="btn login_btn">Login</button>
+                        <div class="d-flex justify-content-center form_container">
+                            <form>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input id="myUser" type="text" name="" class="form-control input_user" value=""
+                                        placeholder="أسم المستخدم" title=" أسم المستخدم , عبارة عن الرقم القومي الخاص بك !!" onblur="disName()" onfocus="this.value=''; this.select()"  required>
+                                        <img id="validate">
+                                </div>
+                                <div class="input-group mb-2">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                    <input id="psw" type="password" name="" class="form-control input_pass" value=""
+                                        placeholder="كلمة السر" title="يجب ادخال اسم المستخدم اولا !!" onblur="disPass()" onfocus="this.value=''" disabled  required>
+                                        <img id="validate2">
+                                </div>
+                                <div class="form-group">
+                                    <!-- <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                        <label class="custom-control-label" for="customControlInline">Remember
+                                            me</label>
+                                    </div> -->
+                                </div>
+                                <div class="d-flex justify-content-center mt-3 login_container">
+                                    <button type="button" name="button" class="btn login_btn" >دخــول</button>
+                                </div>
+                            </form>
                         </div>
-                    </form>
-                </div>
 
-                <div class="mt-4">
-                    <div class="d-flex justify-content-center links">
-                        <a href="#" class="ml-2">سـجل معنـا</a> &nbsp; اذا كنت مستخـدم جـديـد ؟ -
-                    </div>
-                    <div class="d-flex justify-content-center links">
-                        <a href="#"> !نسيـت الباسورد ؟</a>
+                        <div class="mt-4">
+                            <div class="d-flex justify-content-center links">
+                                اذا كنت مستخـدم جـديـد ؟ &nbsp;  <a href="#" class="ml-2" onclick="register()">سـجل معنـا</a> 
+                            </div>
+                            <!-- <div class="d-flex justify-content-center links" >
+                                <a href="#"> !نسيـت الباسورد ؟</a>
+                            </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,6 +108,7 @@
     </div>
     <script src="JS/popper.min.js"></script>
     <script src="bootstrap-5.0.0-beta1-dist/js/bootstrap.js"></script>
+    <script src="../js/loginJS.js"></script>
 </body>
 
 </html>
