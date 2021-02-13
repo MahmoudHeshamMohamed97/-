@@ -1,20 +1,35 @@
-var myName = document.getElementById('name');
-var myEmail = document.getElementById('email');
-var myVisa = document.getElementById('visa');
 
 
+let namePattern = /^[a-z]{3,}$/i;
+let emailPattern= /^\S+@[a-z]+(.com)$/i; 
+let visaPattern = /^\d{15}$/;
 
-var namePattern = /^[a-z]{3,}$/i;
-var emailPattern= /^\S+@[a-z]+(.com)$/i; 
-var visaPattern = /^\d{15}$/;
 
+function visaSubmit() { 
+        let username = document.getElementById("username");
+        let myEmail = document.getElementById("email");
+        let myVisa = document.getElementById("visa");
+        console.log(username.value);
+        console.log(myEmail.value);
+        console.log(myVisa.value);
+        if (namePattern.test(username.value) && emailPattern.test(myEmail.value) && visaPattern.test(myVisa.value) ) { 
+                // we should make here a function to see if the visa card is already exist
+                let currentUser = JSON.parse(localStorage.getItem("currentMetroPerson"));
+                let currentTicketCost =  Number( JSON.parse(localStorage.getItem("currentTicketCost")).cost ) ;
+                currentUser.moneyToPay += currentTicketCost;
+                
+                /*
+                if we need to make a list of travels we should add the current travel in the
+                list then delete it from session storage
+                // sessionStorage.removeItem("travelInfo"); 
 
-function mySubmit() { 
-
-        if (namePattern.test(myName.value) && emailPattern.test(myEmail.value) && visaPattern.test(myVisa.value) ) { 
-                   window.open("https://www.google.com/");
-        } else if (namePattern.test(myName.value)==false) {
-        	myName.select();
+                here we should generate a qr code then display it in the profile
+                using this link
+                https://www.studytonight.com/post/javascript-qr-code-generator
+                */
+                window.open("../../profilePage/profile.html","_self");
+        } else if (namePattern.test(username.value)==false) {
+        	username.select();
         }
         else if (emailPattern.test(myEmail.value)==false) {
         	myEmail.select();

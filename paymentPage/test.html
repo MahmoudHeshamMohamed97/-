@@ -2,7 +2,7 @@
 <html lang="ar">
 
 <head>
-    <title>Payment Page</title>
+    <title>اخــتــر طــريــقــة الــدفــع</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="css/paymentcss.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,39 +12,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="js/payment.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
- 
+
 
     <div class="container">
-        <h1>مترو الإنجاز </h1>
-        
+        <h1>اخــتــر طــريــقــة الــدفــع</h1>
 
-        <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#home">طرق الدفع </a></li>
+
+        <ul class="nav nav-tabs justify-content-center">
             <li><a data-toggle="tab" href="#menu1">كروت الفيزا</a></li>
             <li><a data-toggle="tab" href="#menu2">فودافون كاش</a></li>
+            <li class="active"><a data-toggle="tab" href="#home">طرق الدفع </a></li>
+
         </ul>
 
         <div class="tab-content">
-            <div id="home" class="tab-pane fade in active">
-                <h2>تعليمات تهمك  </h2>
+            <div id="home" class="tab-pane text-center fade in active">
+                <h2 style="text-align: center; font-weight: bold;font-size: 30px;">تعليمات تهمك </h2>
                 <p>حاولنا نسهل عليك طرق الدفع على قد ما نقدر.. هنا تقدر تدفع بأكتر من طريقة <br>
-                  زى انك تدفع عن طريق الفيزا بأكتر من فيزا .. كمان تقدر تدفع عن طريق فودافون كاش  علشان يوصلك البار كود الخاص بيك اللى هو تذكرتك  عن طريق الإيميل الخاص بيك  او عن طريق موقعنا تقدر تحصل على البار كود بشكل سريع وسهل <br>
-                  نتمنالك تجربة ممتعة .
+                    زى انك تدفع عن طريق الفيزا بأكتر من فيزا .. كمان تقدر تدفع عن طريق فودافون كاش علشان يوصلك البار كود
+                    الخاص بيك اللى هو تذكرتك عن طريق الإيميل الخاص بيك او عن طريق موقعنا تقدر تحصل على البار كود بشكل
+                    سريع وسهل <br>
+                    نتمنالك تجربة ممتعة .
                 </p>
             </div>
             <div id="menu1" class="tab-pane fade">
-                <h3>ادفع بالفيزا </h3>
+                <h3 style="text-align: center; font-weight: bold;font-size: 30px;">ادفع بالفيزا </h3>
                 <div>
                     <!--contain container-->
-                    <div class="container-flued">
+                    <div class="container-fluid">
                         <div class="row">
+                            <div class="col-sm-5" id="container_image">
+                                <img src="visa.jpg" class="image-visa">
+                            </div>
+                            <!--first column-->
                             <div class="col-sm-5">
 
                                 <form action="#" method="Post">
@@ -65,7 +72,7 @@
                                             <div>
                                                 <!--<h5>Name</h5>-->
                                                 <input type="Text" class="input" placeholder="اكتب اسمك " required
-                                                    id="name" title="أكتب أسمك هنا على الأقل 3 حروف">
+                                                    id="username" title="أكتب أسمك هنا على الأقل 3 حروف">
                                             </div>
                                         </div>
 
@@ -98,14 +105,11 @@
                                     </div>
                                     <br><br>
 
-                                    <input type="button" onclick="mySubmit()" value="ارسل الكود" class="button"></input>
+                                    <input type="button" onclick="visaSubmit()" value="ارسل الكود" class="button"></input>
                                 </form>
                             </div>
-                            <!--first column-->
-                            <div class="col-sm-5" id="container_image">
-                                <img src="visa.jpg" class="image-visa">
-                            </div>
                             <!--second column-->
+                            
                         </div>
                         <!--row-->
                     </div>
@@ -114,14 +118,20 @@
                 <!--contain container-->
             </div>
             <div id="menu2" class="tab-pane fade">
-                <h3>فوادافون كاش </h3>
+                <h3 style="text-align: center; font-weight: bold;font-size: 30px;">فوادافون كاش </h3>
                 <div>
                     <!--contain container-->
-                    <div class="container-flued">
+                    <div class="container-fluid">
                         <div class="row">
+
+                            <div class="col-sm-5" id="container_image">
+                                <img src="voda.png" class="image-voda">
+                            </div>
+                            <!--first column-->
+
                             <div class="col-sm-5">
 
-                                <form action="/action_page.php">                            
+                                <form action="/action_page.php">
                                     <br><br>
 
                                     <div>
@@ -132,8 +142,8 @@
                                             </div>
                                             <div>
                                                 <!--<h5>phone Number</h5>-->
-                                                <input type="text" class="input" placeholder="اكتب رقم موبايلك"
-                                                    required title="رقم الموبايل" id="phoneNumber">
+                                                <input type="text" class="input" placeholder="اكتب رقم موبايلك" required
+                                                    title="رقم الموبايل" id="phoneNumber">
                                             </div>
                                         </div>
 
@@ -152,14 +162,11 @@
                                     </div>
                                     <br><br>
 
-                                    <input type="button" value="ارسل الكود"  class="button"></input>
+                                    <input type="button" value="ارسل الكود" class="button"></input>
                                 </form>
                             </div>
-                            <!--first column-->
-                            <div class="col-sm-5" id="container_image">
-                                <img src="voda.png" class="image-voda">
-                            </div>
                             <!--second column-->
+                            
                         </div>
                         <!--row-->
                     </div>
@@ -167,8 +174,8 @@
                 </div>
                 <!--contain container-->
             </div>
-            </div>
         </div>
+    </div>
     </div>
 </body>
 

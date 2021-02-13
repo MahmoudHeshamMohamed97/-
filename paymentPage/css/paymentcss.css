@@ -1,3 +1,6 @@
+body{
+	direction: rtl;
+}
 #home{
 	 font-size: 180%;
 }

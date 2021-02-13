@@ -17,7 +17,8 @@ let firstWay = [ 'المرج الجديدة',
 'الدمرداش','غمرة','الشهداء'
 ];
 let allPersons = [];
-
+let cost;
+let travelInfo = {};
 
 document.body.onload = function(){
     //#region  this condition to check if the user logged in
@@ -56,7 +57,7 @@ wasalnyBtn.onclick = function(){
     else
     {
         let numOfStations = getNumOfStations(fromStation, toStation);
-        let cost = getCostOfTicket(numOfStations);
+        cost = getCostOfTicket(numOfStations);
         document.querySelector(".map").style.display = "block";
         let disccuss = 
         `عـمـيـلـنـا الـعـزيـز يـرجـى الـعـلـم انـه فـي حـالـة الـتحرك مـن مـحـطة <span>`
@@ -195,7 +196,15 @@ function bookTicket(){
     if( ! localStorage.getItem("currentMetroPerson") ){
         showMessage('من فضلك قم بتسجيل الدخول اولاً حتى يتسنى لك إستخدام هذه الخاصية');
     }
-    else
-        window.open("../profilePage/profile.html","_self");
+    else{
+        travelInfo = { 
+            fromStation: firstWay[fromStation],
+            toStation: firstWay[toStation],
+            cost: cost
+        }
+        sessionStorage.setItem( "currentTravel", JSON.stringify(travelInfo) );
+        window.open("../paymentPage/payment.html","_self");
+    }
+        
 
 }
