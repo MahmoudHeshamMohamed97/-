@@ -51,3 +51,51 @@ function visaSubmit() {
 }
 
 
+
+////////////////////////////////////////////////////////////////////////
+
+let allPersonsVodaFone = [];
+
+let phoneNumberPattern = /^\d{11}$/;
+let passNumberPattern = /^\d{8,32}$/;
+
+
+function vodaFoneSubmit() { 
+        let myphoneNum = document.getElementById("phoneNumber");
+        let mypassNum = document.getElementById("pass");
+        console.log(myphoneNum.value);
+        console.log(mypassNum.value);
+        if (phoneNumberPattern.test(myphoneNum.value) && passNumberPattern.test(mypassNum.value) ) { 
+                // we should make here a function to see if the visa card is already exist
+                allPersonsVodaFone = JSON.parse( localStorage.getItem("metroPersons") );
+                // let currentUser = JSON.parse(localStorage.getItem("currentMetroPerson"));
+                let currentUserIdx = Number( JSON.parse( sessionStorage.getItem("currentMetroPersonIdx") ) );
+
+                let currentUser = allPersonsVodaFone[currentUserIdx];
+                let currentTravel = JSON.parse(sessionStorage.getItem("currentTravel"));
+                //let currentTicketCost =  Number( currentTravel.cost );
+                //currentUser.moneyToPay += currentTicketCost;
+                
+                currentUser.prevTravels.push(currentTravel);
+                allPersonsVodaFone[currentUserIdx] = currentUser;
+                localStorage.setItem("metroPersons", JSON.stringify(allPersonsVodaFone) );
+
+                /*
+                if we need to make a list of travels we should add the current travel in the
+                list then delete it from session storage
+                // sessionStorage.removeItem("travelInfo"); 
+
+                here we should generate a qr code then display it in the profile
+                using this link
+                https://www.studytonight.com/post/javascript-qr-code-generator
+                */
+                window.open("../../profilePage/profile.html","_self");
+        } else if (phoneNumberPattern.test(myphoneNum.value)==false) {
+                myphoneNum.select();
+        }
+        else if (passNumberPattern.test(mypassNum.value)==false) {
+                mypassNum.select();
+        }
+       
+
+}
