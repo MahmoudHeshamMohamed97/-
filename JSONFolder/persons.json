@@ -3,7 +3,7 @@
         {
             "userName" : 29725471201214,
             "password" : "123456",
-            "qrCode" : "test.jpg",
+            "prevTravels" : [],
             "email" : "mahmoud@gmail.com",
             "phone" : "01111111111",
             "moneyToPay" : 0
@@ -11,7 +11,7 @@
         {
             "userName" : 29412101548732,
             "password" : "asdasd",
-            "qrCode" : "test.jpg",
+            "prevTravels" : [],
             "email" : "abdallah@gmail.com",
             "phone" : "01222222222",
             "moneyToPay" : 0
@@ -19,7 +19,7 @@
         {
             "userName" : 29610201453201,
             "password" : "asd123",
-            "qrCode" : "test1.jpg",
+            "prevTravels" : [],
             "email" : "mostafa@gmail.com",
             "phone" : "01555555555",
             "moneyToPay" : 0
@@ -27,7 +27,7 @@
         {
             "userName" : 29720101020546,
             "password" : "123asd",
-            "qrCode" : "test1.jpg",
+            "prevTravels" : [],
             "email" : "ali@gmail.com",
             "phone" : "01000000000",
             "moneyToPay" : 0
