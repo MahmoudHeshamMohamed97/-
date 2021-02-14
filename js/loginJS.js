@@ -1,3 +1,5 @@
+let allPersons = [];
+
 function login() {
     location.assign("login.html");
 }
@@ -50,4 +52,39 @@ function disPass() {
 		return true;
 
 	}
+}
+
+
+function loadAllPersons(){
+
+	if( localStorage.getItem("metroPersons") )
+		allPersons = JSON.parse( localStorage.getItem("metroPersons") );
+
+	else{
+		fetch("../JSONFolder/persons.json")
+		.then( (res)=> { return res.json(); } )
+		.then( (data)=> {
+			allPersons = data.allPersons;
+			localStorage.setItem("metroPersons",JSON.stringify(allPersons) );
+		} )
+		.catch( (e)=> { console.log(e.message) } );
+	}
+}
+
+
+document.querySelector(".login_btn").onclick = function(){
+	
+	if( disName() && disPass() ){
+		loadAllPersons();
+		let userNameValue = document.getElementById("myUser").value;
+		let userPassValue = document.getElementById("psw").value;
+		for( let i=0; i<allPersons.length; i++ ){
+			if( allPersons[i].userName == userNameValue && allPersons[i].password == userPassValue ){
+				let currObj = allPersons[i];
+				localStorage.setItem("currentMetroPerson", JSON.stringify(currObj));
+				window.open("../index.html","_self");
+			}
+		}
+	}
+
 }

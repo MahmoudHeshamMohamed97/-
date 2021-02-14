@@ -203,7 +203,7 @@ function bookTicket(){
             cost: cost
         }
         sessionStorage.setItem( "currentTravel", JSON.stringify(travelInfo) );
-        window.open("../paymentPage/payment.html","_self");
+        window.open("../paymentPage/test.html","_self");
     }
         
 

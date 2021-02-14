@@ -15,7 +15,7 @@ function visaSubmit() {
         if (namePattern.test(username.value) && emailPattern.test(myEmail.value) && visaPattern.test(myVisa.value) ) { 
                 // we should make here a function to see if the visa card is already exist
                 let currentUser = JSON.parse(localStorage.getItem("currentMetroPerson"));
-                let currentTicketCost =  Number( JSON.parse(localStorage.getItem("currentTicketCost")).cost ) ;
+                let currentTicketCost =  Number( JSON.parse(sessionStorage.getItem("currentTravel")).cost ) ;
                 currentUser.moneyToPay += currentTicketCost;
                 
                 /*
