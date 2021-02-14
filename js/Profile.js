@@ -8,8 +8,8 @@ wow = new WOW(
     }
   );
   wow.init();
-  document.getElementById('moar').onclick = function() {
-    var section = document.createElement('section');
-    section.className = 'section--purple wow fadeInDown';
-    this.parentNode.insertBefore(section, this);
-  };
+  // document.getElementById('moar').onclick = function() {
+  //   var section = document.createElement('section');
+  //   section.className = 'section--purple wow fadeInDown';
+  //   this.parentNode.insertBefore(section, this);
+  // };

@@ -178,7 +178,7 @@ function changeNavToDefault(){
             <a class="nav-link" href="#">الإشــتــراكــاتــت </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">تــســجــيــل الــدخــول</a>
+        <a class="nav-link" href="loginPage/login.html">تــســجــيــل الــدخــول</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">ســجــل مــعــنــا</a>
@@ -188,7 +188,7 @@ function changeNavToDefault(){
 
     document.getElementById("navbarSupportedContent").innerHTML = html;
     // don't forget to un comment this
-    // localStorage.removeItem("currentMetroPerson");
+    localStorage.removeItem("currentMetroPerson");
 
 }
 

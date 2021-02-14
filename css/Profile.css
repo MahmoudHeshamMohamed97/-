@@ -1,4 +1,7 @@
-body{background:url(https://www.adsyndicate.in/wp-content/uploads/2018/02/LP-bg-1.jpg);}
+body{
+    background:url(https://www.adsyndicate.in/wp-content/uploads/2018/02/LP-bg-1.jpg);
+    overflow: hidden;
+}
 .main-heading{width:100%; text-align:center; color:white; margin:60px;text-shadow:  5px 5px 5px #fa1616;}
 
 .col-sm-4{text-align: right;}
