@@ -81,7 +81,9 @@ document.querySelector(".login_btn").onclick = function(){
 		for( let i=0; i<allPersons.length; i++ ){
 			if( allPersons[i].userName == userNameValue && allPersons[i].password == userPassValue ){
 				let currObj = allPersons[i];
+				let currUserIndex = i;
 				localStorage.setItem("currentMetroPerson", JSON.stringify(currObj));
+				sessionStorage.setItem("currentMetroPersonIdx", JSON.stringify(currUserIndex));
 				window.open("../index.html","_self");
 			}
 		}
