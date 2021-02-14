@@ -14,17 +14,19 @@ function visaSubmit() {
         console.log(myVisa.value);
         if (namePattern.test(username.value) && emailPattern.test(myEmail.value) && visaPattern.test(myVisa.value) ) { 
                 // we should make here a function to see if the visa card is already exist
-                let currentUser = JSON.parse(localStorage.getItem("currentMetroPerson"));
+                allPersons = JSON.parse( localStorage.getItem("metroPersons") );
+                // let currentUser = JSON.parse(localStorage.getItem("currentMetroPerson"));
+                let currentUserIdx = Number( JSON.parse( sessionStorage.getItem("currentMetroPersonIdx") ) );
+
+                let currentUser = allPersons[currentUserIdx];
                 let currentTravel = JSON.parse(sessionStorage.getItem("currentTravel"));
                 let currentTicketCost =  Number( currentTravel.cost );
                 currentUser.moneyToPay += currentTicketCost;
-                let currentUserIdx = Number( JSON.parse( sessionStorage.getItem("currentMetroPersonIdx") ) );
-                allPersons = JSON.parse( localStorage.getItem("metroPersons") );
+                
+                currentUser.prevTravels.push(currentTravel);
                 allPersons[currentUserIdx] = currentUser;
-
                 localStorage.setItem("metroPersons", JSON.stringify(allPersons) );
 
-                allPersons[currentUserIdx].prevTravels.push(currentTravel);
                 /*
                 if we need to make a list of travels we should add the current travel in the
                 list then delete it from session storage
@@ -46,6 +48,6 @@ function visaSubmit() {
         	myVisa.select();
         }
 
-        }
+}
 
 

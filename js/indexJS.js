@@ -21,8 +21,11 @@ let cost;
 let travelInfo = {};
 
 document.body.onload = function(){
+    // check if the users included in the localstorage or not
+    checkIfUsers();
+
     //#region  this condition to check if the user logged in
-    if( localStorage.getItem("currentMetroPerson") )
+    if( sessionStorage.getItem("currentMetroPersonIdx") )
         changeTheNavbarViewLoggedIn();
 
     //#endregion
@@ -37,8 +40,6 @@ document.body.onload = function(){
     document.getElementById("selectTo").innerHTML = html;
     //#endregion
 
-    // check if the users included in the localstorage or not
-    checkIfUsers();
 }
 
 wasalnyBtn.onclick = function(){
@@ -127,7 +128,7 @@ function getPersons(){
     fetch('../JSONFolder/persons.json')
     .then( (resp)=> { return resp.json() } )
     .then( (data)=> {
-        allPersons = data.allPersons
+        allPersons = data.allPersons;
         localStorage.setItem("metroPersons",JSON.stringify(allPersons) );
         } )
     .catch( (e)=> {console.log(e.message)} );
@@ -135,7 +136,8 @@ function getPersons(){
 
 // function change the view of navbar if user is logged in
 function changeTheNavbarViewLoggedIn(){
-    let x = JSON.parse( localStorage.getItem("currentMetroPerson") ).userName;
+    // let x = JSON.parse( localStorage.getItem("currentMetroPerson") ).userName;
+    let x = allPersons[ Number( JSON.parse(sessionStorage.getItem("currentMetroPersonIdx") ) ) ].userName;
     let html = 
     `
     <ul class="navbar-nav mr-auto">
@@ -188,12 +190,12 @@ function changeNavToDefault(){
 
     document.getElementById("navbarSupportedContent").innerHTML = html;
     // don't forget to un comment this
-    localStorage.removeItem("currentMetroPerson");
+    sessionStorage.removeItem("currentMetroPersonIdx");
 
 }
 
 function bookTicket(){
-    if( ! localStorage.getItem("currentMetroPerson") ){
+    if( ! sessionStorage.getItem("currentMetroPersonIdx") ){
         showMessage('من فضلك قم بتسجيل الدخول اولاً حتى يتسنى لك إستخدام هذه الخاصية');
     }
     else{
