@@ -67,72 +67,85 @@ function disRegEmail() {
 
 var myPassword = document.getElementById("password");
 function disPass() {
-	
-	if (myPassword.value.length <= 3 ) {
+
+    if (myPassword.value.length <= 3) {
         document.getElementById("confirm").disabled = true;
-		document.getElementById("invalid").innerHTML = " يجب الا تقل كلمة السر عن 4 ارقام !!";
-		document.getElementById("validate3").src = "../resources/notvalid.png";
-		document.getElementById("invalid").style.display = "block";
+        document.getElementById("invalid").innerHTML = " يجب الا تقل كلمة السر عن 4 ارقام !!";
+        document.getElementById("validate3").src = "../resources/notvalid.png";
+        document.getElementById("invalid").style.display = "block";
         // document.getElementById("password").value = "كلمة سر غير صالحة !!";
 
-		return false;
+        return false;
 
-	}
-	else {
+    }
+    else {
         document.getElementById("confirm").disabled = false;
         document.getElementById("confirm").focus();
-		document.getElementById("validate3").src = "../resources/valid.png";
-		document.getElementById("password").onfocus = myPassword;
-		document.getElementById("invalid").style.display = "none";
-		return true;
+        document.getElementById("validate3").src = "../resources/valid.png";
+        document.getElementById("password").onfocus = myPassword;
+        document.getElementById("invalid").style.display = "none";
+        return true;
 
-	}
+    }
 }
 
-function RegConfirmPass(){
+function RegConfirmPass() {
     var confirmPass = document.getElementById("confirm");
-    if(confirmPass.value != myPassword.value ){
-            // document.getElementById("confirm").value = "PassWord didn't Match,Try again!";
-            document.getElementById("invalid").innerHTML = " الباسـورد غير متطابق !!";
-		document.getElementById("invalid").style.display = "block";
-            document.getElementById("validate4").src = "../resources/notvalid.png";
-            return false;
+    if (confirmPass.value != myPassword.value) {
+        // document.getElementById("confirm").value = "PassWord didn't Match,Try again!";
+        document.getElementById("invalid").innerHTML = " الباسـورد غير متطابق !!";
+        document.getElementById("invalid").style.display = "block";
+        document.getElementById("validate4").src = "../resources/notvalid.png";
+        return false;
 
     }
-    else if(confirmPass.value == myPassword.value){
-            // document.getElementById("confirm").onfocus = confirmPass;
-            document.getElementById("validate4").src = "../resources/valid.png";       
-		document.getElementById("invalid").style.display = "none";
-            return true;
+    else if (confirmPass.value == myPassword.value) {
+        // document.getElementById("confirm").onfocus = confirmPass;
+        document.getElementById("validate4").src = "../resources/valid.png";
+        document.getElementById("invalid").style.display = "none";
+        return true;
 
     }
 }
 
 
 
-function registerBtn(){
+function registerBtn() {
 
-    if( RegConfirmPass() && disPass() && disRegEmail() && disName() && disRegPhone ){
+    if (RegConfirmPass() && disPass() && disRegEmail() && disName() && disRegPhone) {
         // alert("valid");
 
-        let obj = {
-            userName : document.getElementById("myUser").value,
-            password : document.getElementById("password").value,
-            prevTravels : [],
-            email : document.getElementById("email").value,
-            phone : document.getElementById("phone").value,
-            moneyToPay : 0
+        if (checkIfExist()) {
+            document.querySelector(".alert-danger").classList.remove("d-none");
         }
+        else {
+            let obj = {
+                userName: document.getElementById("myUser").value,
+                password: document.getElementById("password").value,
+                prevTravels: [],
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                moneyToPay: 0
+            }
 
-        let allPersons = JSON.parse( localStorage.getItem("metroPersons") );
-        allPersons.push( obj );
-        localStorage.setItem( "metroPersons", JSON.stringify( allPersons ) );
-        let idx = allPersons.length -1;
-        sessionStorage.setItem("currentMetroPersonIdx", idx);
-        window.open("../index.html","_self");
+            let allPersons = JSON.parse(localStorage.getItem("metroPersons"));
+            allPersons.push(obj);
+            localStorage.setItem("metroPersons", JSON.stringify(allPersons));
+            let idx = allPersons.length - 1;
+            sessionStorage.setItem("currentMetroPersonIdx", idx);
+            window.open("../index.html", "_self");
+        }
     }
-    
+
 
 }
 
-
+function checkIfExist(){
+    let userName = document.getElementById("myUser").value;
+    let allPersons = JSON.parse( localStorage.getItem("metroPersons") );
+    for( let i=0; i<allPersons.length; i++ ){
+        if( allPersons[i].userName == userName )
+            return true;
+    }
+    return false;
+}

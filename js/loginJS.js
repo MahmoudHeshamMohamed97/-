@@ -85,8 +85,10 @@ document.querySelector(".login_btn").onclick = function(){
 				// localStorage.setItem("currentMetroPerson", JSON.stringify(currObj));
 				sessionStorage.setItem("currentMetroPersonIdx", JSON.stringify(currUserIndex));
 				window.open("../index.html","_self");
+				return;
 			}
 		}
+		document.querySelector(".alert-danger").classList.remove("d-none");
 	}
 
 }
