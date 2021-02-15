@@ -7,15 +7,15 @@
 html{
     height: 100%;
     background-repeat: no-repeat;
-    background:url(../resources/cover2.jpg);
+    background:url(../resources/final.jpg);
        background-size: cover;
 }
 body{
     direction: rtl;
-    overflow: hidden;
+    // overflow: hidden;
     height: 100%;
  	background-repeat: no-repeat;
- 	background:url(../resources/cover2.jpg);
+ 	background:url(../resources/final.jpg);
 	background-size: cover;
 
 .navbar {
@@ -136,7 +136,7 @@ span.input-group-addon{
         
     }
 }
-#validate, #validate2 ,#validate3 , #validate4{
+#validate, #validate2, #validate3 ,#validate4 , #validate1{
     background-color: #ffffff;
   }
   #button{

@@ -1,3 +1,24 @@
+function disRegPhone() {
+    var regPhone = document.getElementById("phone").value;
+    // console.log(regPhone.value.length);
+    var regPattern = /^(010|011|012|015)\d{8}$/;
+    if (regPattern.test(regPhone) == false) {
+        document.getElementById("invalid").innerHTML = "الهاتف المستخدم غير صحيح !!";
+        document.getElementById("invalid").style.display = "block";
+        document.getElementById("phone").value = " رقم غير صحيح !!";
+        document.getElementById("validate").src = "../resources/notvalid.png";
+        return false;
+
+    }
+    else {
+        document.getElementById("phone").onfocus = regPhone;
+        document.getElementById("validate").src = "../resources/valid.png";
+        document.getElementById("invalid").style.display = "none";
+        return true;
+
+    }
+}
+
 function disName() {
     var name = document.getElementById("myUser").value;
 
@@ -7,7 +28,7 @@ function disName() {
         document.getElementById("invalid").innerHTML = " برجاء ادخال الرقم القومي بشكل صحيح !!";
         document.getElementById("invalid").style.display = "block";
         document.getElementById("myUser").value = "أسم مستخدم خاطئ !!";
-        document.getElementById("validate").src = "../resources/notvalid.png";
+        document.getElementById("validate1").src = "../resources/notvalid.png";
         return false;
     }
 
@@ -16,7 +37,7 @@ function disName() {
         // document.getElementById("confirm").disabled = false;
         document.getElementById("myUser").onfocus = name;
         // document.getElementById("password").focus();
-        document.getElementById("validate").src = "../resources/valid.png";
+        document.getElementById("validate1").src = "../resources/valid.png";
         document.getElementById("invalid").style.display = "none";
         return true;
 
@@ -86,3 +107,4 @@ function RegConfirmPass(){
 
     }
 }
+

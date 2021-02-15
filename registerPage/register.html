@@ -27,20 +27,20 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="../index.html">الــرئــيــســيــة <span class="sr-only">(current)</span></a>
+				<li class="nav-item ">
+					<a class="nav-link" href="../index.html">الــرئــيــســيــة</span></a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">اتـــصـــل بـــنـــا</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">الإشــتــراكــاتــت </a>
+					<a class="nav-link" href="../userAllTrans/allTrans.html">الـــرحـــلات </a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="loginPage/login.html">تــســجــيــل الــدخــول</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="#">ســجــل مــعــنــا</a>
+					<a class="nav-link" href="#">ســجــل مــعــنــا  <span class="sr-only">(current)</span></a>
 				</li>
 			</ul>
 		</div>
@@ -64,8 +64,10 @@
 							</div>
 							<br>
 							<div class="input-group">
-								<!-- <span class="input-group-addon" ><i class="fa fa-user fa" aria-hidden="true" ></i></span>
-									<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/> -->
+								<span class="input-group-addon" ><i class="fas fa-phone" aria-hidden="true" ></i></span>
+								<input type="text" title="يجب ادخال رقم الهاتف المسجل باسمك لدي مزود الخدمه !!" class="form-control" name="name" id="phone"  placeholder="ادخل رقم الهاتف الخاص بك .." onblur="disRegPhone()" onfocus="this.value=''; this.select()" required/>
+								<img id="validate">
+
 							</div>
 						</div>
 					</div>
@@ -78,9 +80,9 @@
 
 								<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
 								<input id="myUser" type="text" title=" أسم المستخدم , عبارة عن الرقم القومي الخاص بك !!"
-									class="form-control" name="username" id="username" placeholder="أسم المستخدم .."
+									class="form-control" name="username" id="username" placeholder="ادخل أسم المستخدم .."
 									onblur="disName()" onfocus="this.value=''; this.select()" required />
-								<img id="validate">
+								<img id="validate1">
 							</div>
 						</div>
 					</div>
