@@ -108,3 +108,31 @@ function RegConfirmPass(){
     }
 }
 
+
+
+function registerBtn(){
+
+    if( RegConfirmPass() && disPass() && disRegEmail() && disName() && disRegPhone ){
+        // alert("valid");
+
+        let obj = {
+            userName : document.getElementById("myUser").value,
+            password : document.getElementById("password").value,
+            prevTravels : [],
+            email : document.getElementById("email").value,
+            phone : document.getElementById("phone").value,
+            moneyToPay : 0
+        }
+
+        let allPersons = JSON.parse( localStorage.getItem("metroPersons") );
+        allPersons.push( obj );
+        localStorage.setItem( "metroPersons", JSON.stringify( allPersons ) );
+        let idx = allPersons.length -1;
+        sessionStorage.setItem("currentMetroPersonIdx", idx);
+        window.open("../index.html","_self");
+    }
+    
+
+}
+
+
