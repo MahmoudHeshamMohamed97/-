@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<!-- Website Font style -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/registerStyle.css">
+	<title>Register Page</title>
+</head>
+
+<body>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+		<a class="navbar-brand" href="#" style="padding-top:1%;font-size: medium;">مــتــرو الانــجــاز</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="../index.html">الــرئــيــســيــة <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">اتـــصـــل بـــنـــا</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">الإشــتــراكــاتــت </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="loginPage/login.html">تــســجــيــل الــدخــول</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="#">ســجــل مــعــنــا</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+
+	<div class="container">
+		<div class="row main">
+			<div class="col-sm-6 metro-logo">
+				<img src="../resources/metrologo.png">
+			</div>
+			<div class="main-login main-center">
+
+				<form class="" method="post" action="#">
+
+					<div class="form-group">
+						<label for="name" class="cols-sm-2 control-label"></label>
+						<div class="cols-sm-10">
+							<div style="text-align: center; font:large bolder;">
+								<span id="invalid" style="color: rgb(240, 15, 15);font-weight: bolder;"></span>
+							</div>
+							<br>
+							<div class="input-group">
+								<!-- <span class="input-group-addon" ><i class="fa fa-user fa" aria-hidden="true" ></i></span>
+									<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/> -->
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="email" class="cols-sm-2 control-label"></label>
+						<div class="cols-sm-10">
+
+							<div class="input-group">
+
+								<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+								<input id="myUser" type="text" title=" أسم المستخدم , عبارة عن الرقم القومي الخاص بك !!"
+									class="form-control" name="username" id="username" placeholder="أسم المستخدم .."
+									onblur="disName()" onfocus="this.value=''; this.select()" required />
+								<img id="validate">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="username" class="cols-sm-2 control-label"></label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope fa"
+										aria-hidden="true"></i></span>
+								<input type="text" title="اكتب البريد الالكتروني الخاص بك !!" class="form-control"
+									name="email" id="email" placeholder="أدخل البريـد الألكتروني الخاص بك .."
+									type="Email" onblur="disRegEmail()" onfocus="this.value=''; this.select()"
+									required />
+								<img id="validate2">
+							</div>
+
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="password" class="cols-sm-2 control-label"></label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-lock fa-lg"
+										aria-hidden="true"></i></span>
+								<input type="password" title=" يجب ادخال اسم المستخدم و الايميل صحيحين اولا !! "
+									class="form-control" name="password" id="password"
+									placeholder="أدخل الباسـورد الخاص بك .." onblur="disPass()" onfocus="this.value=''"
+									disabled required />
+								<img id="validate3">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="confirm" class="cols-sm-2 control-label"></label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-lock fa-lg"
+										aria-hidden="true"></i></span>
+								<input type="password" title="يجب أدخال الباسـورد الخاص بك اولا  !!"
+									class="form-control" name="confirm" id="confirm"
+									placeholder="أعد كتابة الباسـورد كما هو بالأعلي .." onblur="RegConfirmPass()"
+									onfocus="this.value" disabled required />
+								<img id="validate4">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group ">
+						<a href="#" target="_blank" type="button" id="button"
+							class="btn btn-primary btn-lg btn-block login-button ">ســجــل</a>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="../js/registerJS.js"></script>
+</body>
+
+</html>
