@@ -148,7 +148,7 @@ function changeTheNavbarViewLoggedIn(){
             <a class="nav-link" href="#">اتـــصـــل بـــنـــا</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">الإشــتــراكــاتــت </a>
+        <a class="nav-link" href="userAllTrans/allTrans.html">الــرحــلات</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">مــرحــبــاً `+ x +`</a>
@@ -177,13 +177,13 @@ function changeNavToDefault(){
             <a class="nav-link" href="#">اتـــصـــل بـــنـــا</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">الإشــتــراكــاتــت </a>
+        <a class="nav-link" href="userAllTrans/allTrans.html">الــرحــلات</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" href="loginPage/login.html">تــســجــيــل الــدخــول</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">ســجــل مــعــنــا</a>
+        <a class="nav-link" href="registerPage/register.html">ســجــل مــعــنــا</a>
         </li>
     </ul>
     `;

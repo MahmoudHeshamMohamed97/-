@@ -22,8 +22,15 @@ function visaSubmit() {
                 let currentTravel = JSON.parse(sessionStorage.getItem("currentTravel"));
                 let currentTicketCost =  Number( currentTravel.cost );
                 currentUser.moneyToPay += currentTicketCost;
-                
-                currentUser.prevTravels.push(currentTravel);
+                let d = new Date();
+                d = d.toDateString();
+                let newTravel = {
+                        fromStation: currentTravel.fromStation,
+                        toStation: currentTravel.toStation,
+                        cost: currentTravel.cost,
+                        date: d
+                }
+                currentUser.prevTravels.push(newTravel);
                 allPersons[currentUserIdx] = currentUser;
                 localStorage.setItem("metroPersons", JSON.stringify(allPersons) );
 
@@ -75,8 +82,15 @@ function vodaFoneSubmit() {
                 let currentTravel = JSON.parse(sessionStorage.getItem("currentTravel"));
                 //let currentTicketCost =  Number( currentTravel.cost );
                 //currentUser.moneyToPay += currentTicketCost;
-                
-                currentUser.prevTravels.push(currentTravel);
+                let d = new Date();
+                d = d.toDateString();
+                let newTravel = {
+                        fromStation: currentTravel.fromStation,
+                        toStation: currentTravel.toStation,
+                        cost: currentTravel.cost,
+                        date: d
+                }
+                currentUser.prevTravels.push(newTravel);
                 allPersonsVodaFone[currentUserIdx] = currentUser;
                 localStorage.setItem("metroPersons", JSON.stringify(allPersonsVodaFone) );
 
