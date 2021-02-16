@@ -62,7 +62,9 @@ body {
     background: #0fc9af;
   }
 
-
+  .active a{
+		color: #fdb827 !important;
+	}
 
 
   .item-carousel-blog-block {
@@ -90,9 +92,9 @@ body {
     position: absolute;
     z-index: 5;
     padding: 4px 20px;
-    top: -20px;
-    right: 8px;
-    background-color: #41cb52;
+    top: -30%;
+    right: 5%;
+    background-color: #337ab7 !important;
   }
 
   .item-box-blog-date span {
@@ -122,7 +124,8 @@ body {
   }
 
   .item-box-blog-heading a {
-      text-decoration: none;
+      text-decoration: none !important;
+      color: #337ab7;
   }
 
   .item-box-blog-data p {

@@ -13,6 +13,10 @@ body {
   background-size: cover;
 }
 
+body .active a {
+  color: #fdb827 !important;
+}
+
 body .navbar {
   font-size: medium;
   z-index: 99;

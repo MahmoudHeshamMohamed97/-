@@ -1,5 +1,7 @@
 body{
 	direction: rtl;
+	background: url(https://www.adsyndicate.in/wp-content/uploads/2018/02/LP-bg-1.jpg);
+	color: #337ab7 !important;
 }
 #home{
 	 font-size: 180%;
@@ -26,7 +28,7 @@ body{
 
 
 .i{
-	color:  grey;
+	color:  #337ab7;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -38,7 +40,7 @@ body{
 	margin: 5px;
 	background: none;
 	padding: 0.5rem 0.7rem;
-	color:black;
+	color:#337ab7;
 	outline: none;
 	font-size: 18px;
 	border: none;

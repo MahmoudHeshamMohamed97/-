@@ -11,6 +11,10 @@ body nav {
   left: 0;
 }
 
+body nav .active a {
+  color: #fdb827 !important;
+}
+
 body .carousel {
   margin-top: 55px;
   height: 80vh;
@@ -25,7 +29,7 @@ body .carousel img {
 
 body .carousel .carousel-indicators li {
   height: 5px;
-  background-color: yellowgreen;
+  background-color: #fdb827;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -34,7 +38,7 @@ body .carousel .carousel-indicators li {
 
 body .DirectionsPart {
   border-radius: 7px;
-  background-color: yellowgreen;
+  background-color: #fdb827;
   padding: 25px;
   width: 50%;
   margin: auto;
@@ -55,6 +59,11 @@ body .DirectionsPart input:focus {
   font-weight: bold;
 }
 
+body .DirectionsPart #wasalny {
+  background-color: #1D316A;
+  color: white;
+}
+
 body messageBox {
   position: fixed;
   z-index: 99;
@@ -65,7 +74,8 @@ body messageBox {
   padding: 25px;
   border-radius: 7px;
   text-align: center;
-  background-color: grey;
+  background-color: #1D316A;
+  color: white;
 }
 
 body .map {
@@ -127,7 +137,7 @@ body .main .text-block:hover {
 }
 
 body .main .text-block h2 {
-  color: #76ff06;
+  color: #fdb827;
   text-shadow: 5px 5px 5px #fa1616;
 }
 

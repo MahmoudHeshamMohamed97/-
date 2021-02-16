@@ -11,6 +11,9 @@ html{
        background-size: cover;
 }
 body{
+    .active a{
+		color: #fdb827 !important;
+	}
     direction: rtl;
     // overflow: hidden;
     height: 100%;

@@ -9,6 +9,9 @@ html {
 }
 body
 {
+	.active a{
+		color: #fdb827 !important;
+	}
 		overflow: hidden;
 		direction: rtl;
 		margin: 0;

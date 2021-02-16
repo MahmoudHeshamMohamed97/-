@@ -3,6 +3,9 @@ body{
 }
 .main-heading{width:100%; text-align:center; color:white; margin:60px;text-shadow:  5px 5px 5px #fa1616;}
 
+.active a{
+    color: #fdb827 !important;
+}
 .col-sm-4{text-align: right;}
 h6{text-align: right;}
 h3{text-align: right;color: white;padding:15px;text-shadow:  5px 5px 5px #fa1616;}
@@ -18,6 +21,13 @@ h3{text-align: right;color: white;padding:15px;text-shadow:  5px 5px 5px #fa1616
         padding: 2rem;
         width:100%;
         height: 350px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .card-body .row{
+        width: 100%;
     }
     
 .img-box {
