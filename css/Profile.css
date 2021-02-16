@@ -13,6 +13,7 @@ h3{text-align: right;color: white;padding:15px;text-shadow:  5px 5px 5px #fa1616
     .card {
         background-color: #fff;
         border-radius: 25px;
+        
     }
     
     .card-body {
@@ -20,7 +21,7 @@ h3{text-align: right;color: white;padding:15px;text-shadow:  5px 5px 5px #fa1616
         min-height: 1px;
         padding: 2rem;
         width:100%;
-        height: 350px;
+        height: 310px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -30,11 +31,11 @@ h3{text-align: right;color: white;padding:15px;text-shadow:  5px 5px 5px #fa1616
         width: 100%;
     }
     
-.img-box {
+/* .img-box {
     width:100%;
     height: 100%;
     border: 10px solid transparent;
     border-radius: 25px;
     padding: 5px;
 border-image: url(../resources/border.png) 25 stretch;
-}  
+}   */
